@@ -14,10 +14,11 @@
         <li class="nav-item">
           <router-link to="/contacto" class="nav-lnk">Contacto</router-link>
         </li>
-</ul>
-
+      </ul>
     </div>
+    <div class="container">
     <router-view />
+    </div>
   </div>
 </template>
 

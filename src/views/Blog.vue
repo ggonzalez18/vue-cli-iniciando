@@ -1,8 +1,12 @@
 <template>
   <div>
-<h1 v-text="title"></h1>
-<router-link :to="paginate(false)">Anterior</router-link>
-<router-link :to="paginate(true)">Siguiente</router-link>
+    <h1 v-text="title"></h1>
+    <router-link :to="paginate(false)" class="btn btn-info mr-3">Anterior</router-link>
+    <router-link :to="paginate(true)" class="btn btn-info">Siguiente</router-link>
+    <br>
+    <br>
+    <router-link :to="{name:'Comments'}">Comentar</router-link>
+    <router-view></router-view>
   </div>
 </template>
 

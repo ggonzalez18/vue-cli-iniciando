@@ -5,18 +5,27 @@ import Blog from '../views/Blog.vue'
 import Contact from '../views/Contact.vue'
 import Services from '../views/Services.vue'
 import NotFound from '../views/NotFound.vue'
+import Comments from '../views/Comments.vue'
 
 Vue.use(VueRouter)
 
 const routes = [{
   path: '/',
   name: 'Home',
-  component: Home
+  component: Home,
+  alias: '/inicio'
 },
 {
   path: '/blog/:post',
   name: 'Blog',
-  component: Blog
+  component: Blog,
+  children: [
+    {
+      path: 'comentarios',
+      name: 'Comments',
+      component: Comments
+    }
+  ]
 },
 {
   path: '/contacto',
@@ -26,6 +35,11 @@ const routes = [{
 {
   path: '/servicio',
   name: 'Services',
+  redirect: '/experience'
+},
+{
+  path: '/experience',
+  name: 'Experience',
   component: Services
 },
 {

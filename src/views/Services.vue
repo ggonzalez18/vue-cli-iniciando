@@ -1,5 +1,5 @@
 <template>
   <div >
-    <h1>sección de servicios</h1>
+    <h1>Hola soy el mejor servicio del mundo</h1>
   </div>
 </template>
